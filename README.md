@@ -1,1 +1,1 @@
-# giada_sponzilli_portfolio
+# giada-sponzilli-portfolio
