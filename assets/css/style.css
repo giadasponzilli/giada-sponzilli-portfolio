@@ -9,6 +9,48 @@ body {
   line-height: 1.5;
 }
 
+header {
+  display: flex;
+  background-color: #30333C;
+  padding: 20px;
+  justify-content: space-between;
+  padding-left: 0;
+  padding-right: 80px;
+}
+
+.lefttitle, .navright {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  
+}
+
+.navright{
+  width: 400px;
+  justify-content: space-around;
+}
+
+.lefttitle {
+background-color: #89C0C2;
+padding: 20px;
+width: 300px;
+justify-content: flex-end;
+}
+
+h1 {
+  color: #30333C;
+}
+
+a {
+  padding: 5px;
+  color: #89C0C2;
+  border-bottom: solid 4px #89C0C2;
+  text-decoration: none;
+  margin: 5px;
+  padding-bottom: 0;
+  font-size: 20px;
+}
+
 h1,
 h2,
 h3,
