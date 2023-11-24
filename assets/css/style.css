@@ -69,6 +69,11 @@ a {
   font-size: 20px;
 }
 
+a:hover {
+  color: #89C0C2;
+  background-color: rgba(63, 81, 104, 0.5);
+}
+
 .heroimage {
   height: 170px;
   width: 100%;
@@ -90,12 +95,78 @@ a {
   padding: 0 10px 0 10px;
 }
 
-.page-section {
-  display: flex;
+.page-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 25% 50% 25%;
+  grid-template-areas: 
+  "about"
+  "work"
+  "contact";
+  padding-left: 40px;
+}
+
+#about {
+  grid-area: about;
+}
+
+#work {
+  grid-area: work;
+}
+
+#contact {
+  grid-area: contact;
+}
+
+#about {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-template-areas: 
+  "aboutmeside aboutmetext";
+  padding-left: 40px;
+}
+
+#aboutmeside {
+  grid-area: aboutmeside;
+}
+
+#aboutmetext {
+  grid-area: aboutmetext;
+}
+
+#work {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-template-areas: 
+  "workside worklinks";
+  padding-left: 40px;
+}
+
+#workside {
+  grid-area: workside;
+}
+
+#worklinks {
+  grid-area: worklinks;
+}
+
+#contact {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-template-areas: 
+  "contactmeside contactmelinks";
+  padding-left: 40px;
+}
+
+#contactmeside {
+  grid-area: contactmeside;
+}
+
+#contactmelinks {
+  grid-area: contactmelinks;
 }
 
 #about, #work, #contact {
-  height: 200px;
   padding: 30px 100px 30px 30px;
 }
 
@@ -105,11 +176,11 @@ a {
 
 #about {
   height: 200px;
+  /* margin-bottom: 0; */
 }
 
-#aboutmeside {
+#aboutmeside, #workside, #contactmeside {
   display: flex;
-  width: 700px;
   border-right: solid 4px #445877;
   padding: 0 20px 0 20px;
   justify-content: flex-end;
@@ -120,6 +191,73 @@ a {
   display: flex;
   padding-left: 40px;
   text-align: justify;
-  text-justify: inter-word;
+  /* text-justify: inter-word; */
   align-items: center;
 }
+
+#work {
+  height: 800px;
+  margin-bottom: 500px;
+  /* margin-top: 0; */
+}
+
+#worklinks {
+  display: grid;
+  grid-template-columns: 400px 400px;
+  grid-template-rows: 50% 25% 25%;
+  grid-template-areas: 
+  "portfolio1 portfolio1"
+  "portfolio2 portfolio3"
+  "portfolio4 portfolio5";
+  padding-left: 40px;
+}
+
+#portfolio1 {
+  grid-area: portfolio1;
+  background-image: url("../images/02-portfolio-1.jpg");
+}
+
+#portfolio2 {
+  grid-area: portfolio2;
+  background-image: url("../images/02-portfolio-2.jpg");
+}
+
+#portfolio3 {
+  grid-area: portfolio3;
+  background-image: url("../images/02-portfolio-3.jpg");
+}
+
+#portfolio4 {
+  grid-area: portfolio4;
+  background-image: url("../images/02-portfolio-4.jpg");
+}
+
+#portfolio5 {
+  grid-area: portfolio5;
+  background-image: url("../images/02-run-buddy.jpg");
+}
+
+.portfolioGridArea {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  align-content: center;
+  border: #89C0C2;
+}
+
+.heading {
+  background-color: #89C0C2;
+  color: #30333C;
+}
+
+#contact {
+  height: 200px;
+  /* padding-top: 40px; */
+}
+
+/* #contact {
+  scroll-behavior: smooth;
+} */
