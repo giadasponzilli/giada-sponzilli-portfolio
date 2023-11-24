@@ -51,6 +51,28 @@ a {
   font-size: 20px;
 }
 
+.heroimage {
+  height: 170px;
+  width: 100%;
+  margin-bottom: 25px;
+  background-image: linear-gradient(rgba(68, 88, 119, 0.5), rgba(61, 113, 192, 0.5)), url("../images/02-hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  /* position: relative; */
+}
+
+.subtitle {
+  font-size: 30px;
+  position: relative;
+  width: 250px;
+  top: 60%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  color: #30333C;
+  background-color: #89C0C2;
+  padding: 0 10px 0 10px;
+}
+
 h1,
 h2,
 h3,
