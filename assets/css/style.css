@@ -23,8 +23,18 @@ p {
   margin: 0;
 }
 
+h1 {
+  color: #30333C;
+  font-size: 30px;
+}
+
 h2 {
-  font-size: 40px;
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 22px;
+  color: #30333C;
 }
 
 header {
@@ -53,10 +63,6 @@ background-color: #89C0C2;
 padding: 20px;
 width: 300px;
 justify-content: flex-end;
-}
-
-h1 {
-  color: #30333C;
 }
 
 a {
@@ -98,33 +104,6 @@ a:hover {
   padding: 0 10px 0 10px;
 }
 
-/* .page-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 10% 50% 10%;
-  grid-template-areas: 
-  "about"
-  "work"
-  "contact";
-  padding-left: 40px;
-} */
-
-/* #about {
-  grid-area: about;
-}
-
-#work {
-  grid-area: work;
-}
-
-#contact {
-  grid-area: contact;
-} */
-
-/* #about, #work, #contact {
-  padding: 30px 100px 30px 40px;
-}  */
-
 #about {
   display: grid;
   grid-template-columns: 15% 85%;
@@ -142,11 +121,12 @@ a:hover {
   grid-area: aboutmetext;
 }
 
-#imgtext {
+#profileimg {
   height: 200px;
   width: auto;
   float: left;
   padding: 30px;
+  border-radius: 50px;
 }
 
 #work {
@@ -171,8 +151,8 @@ a:hover {
   grid-template-columns: 15% 85%;
   grid-template-areas: 
   "contactmeside contactmelinks";
-  padding: 30px 100px 165px 40px;
-  height: 160px;
+  padding: 30px 100px 50px 40px;
+  height: 220px;
 }
 
 #contactmeside {
@@ -201,6 +181,14 @@ a:hover {
   text-align: justify;
   /* text-justify: inter-word; */
   align-items: center;
+}
+
+section {
+  font-size: 18px;
+}
+
+article {
+  font-size: 18px;
 }
 
 #worklinks {
@@ -274,19 +262,6 @@ a:hover {
   padding: 10px 0 10px 20px;
 }
 
-h3 {
-  font-size: 22px;
-}
-
-/* Change position of section and article */
-section {
-  font-size: 18px;
-}
-
-article {
-  font-size: 18px;
-}
-
 #contactmelinks {
   display: flex;
   padding-left: 40px;
@@ -297,6 +272,13 @@ article {
 #contactmelinks a {
   color: #445877;
   border-bottom: solid 4px #445877;
+}
+
+footer {
+  background-color: #30333C;
+  color: #89C0C2;
+  text-align: center;
+  padding: 20px;
 }
 
 /* media */
