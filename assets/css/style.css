@@ -243,11 +243,15 @@ a:hover {
   border: solid 4px #89C0C2;
 }
 
+#worklinks a {
+  padding: 0;
+}
+
 .portfolioGridArea {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 5px;
+  /* margin: 5px; */
   cursor: pointer;
   display: grid;
   align-content: center;
@@ -269,16 +273,21 @@ a:hover {
   padding: 10px 0 10px 20px;
 }
 
-.heading p {
-  display: inline;
-}
-
-.heading section h3 {
+h3 {
   font-size: 22px;
 }
 
+/* Change position of section and article */
+section {
+  font-size: 18px;
+}
+
+article {
+  font-size: 18px;
+}
+
 #contact {
-  height: 100px;
+  height: 160px;
 }
 
 #contactmelinks {
