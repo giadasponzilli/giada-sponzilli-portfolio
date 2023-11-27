@@ -44,6 +44,10 @@ h3 {
   color: var(--color1);
 }
 
+h4 {
+  font-size: 18px;
+}
+
 header {
   display: flex;
   background-color: var(--color1);
@@ -280,4 +284,162 @@ footer {
   padding: 20px;
 }
 
-/* media */
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+  * {
+  margin: 0 auto;
+  box-sizing: none;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+  
+  h2 {
+    font-size: 18px;
+  }
+  
+  h3 {
+    font-size: 15px;
+  }
+
+  h4 {
+    font-size: 10px;
+  }
+
+  nav a {
+    display: none;
+  }
+
+  nav a:last-child {
+    display: contents;
+  }
+
+  .subtitle {
+    position: relative;
+    width: 160px;
+    top: 60%;
+    left: 68%;
+  }
+
+  section {
+    font-size: 12px;
+  }
+  
+  article {
+    font-size: 12px;
+  }
+
+  #about {
+    display: grid;
+    grid-template-rows: 50px 50px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "aboutmeside"
+    "aboutmetext";
+    height: 520px;
+  }
+  
+  #aboutmeside, #workside, #contactmeside {
+    display: flex;
+    border-right: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #aboutmetext {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    align-items: flex-start;
+    width: 300px;
+    padding: 0;
+    margin: 0 auto;
+  }
+  
+  #profileimg {
+    height: 200px;
+    width: auto;
+    float: left;
+    padding: 30px;
+    border-radius: 50px;
+  }
+  
+  #work {
+    display: grid;
+    grid-template-rows: 8% 85%;
+    grid-template-columns: 1fr;    grid-template-areas: 
+    "workside" "worklinks";
+    padding: 0px;
+    height: 855px;
+    margin: 0 auto;
+  }
+  
+  #worklinks {
+    grid-area: worklinks;
+    display: grid;
+    width: 300px;
+    height: 950px;
+    grid-template-rows: 15% 15% 15% 15% 15%;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "portfolio1"
+    "portfolio2" "portfolio3"
+    "portfolio4" "portfolio5";
+    padding: 0;
+    margin: 0 auto;
+    }
+  
+  #worklinks a {
+    padding: 0;
+  }
+  
+  .heading {
+    display: flex;
+    background-color: var(--color2);
+    color: var(--color1);
+    justify-content: center;
+    align-items: center;
+    width: 205px;
+    height: 55px;
+    padding: 0px;
+  }
+  
+  #contact {
+    display: grid;
+    grid-template-rows: 15% 85%;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "contactmeside" "contactmelinks";
+    height: 350px;
+    padding: 0;
+    margin: 0 auto;
+  }
+  
+  #contactmelinks {
+    grid-area: contactmelinks;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* height: 400px; */
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  #contactmelinks a {
+    font-size: 14px;
+    padding: 0;
+    margin: 15px;
+  }
+  
+  footer {
+    padding: 15px;
+    font-size: 9px;
+  }
+}
