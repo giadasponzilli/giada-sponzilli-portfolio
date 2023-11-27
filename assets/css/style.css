@@ -3,6 +3,13 @@
   scroll-behavior: smooth;
 }
 
+:root {
+  --color1: #30333C;
+  --color2: #89C0C2;
+  --color3: #445877;
+  --gridareaborder: solid 4px #89C0C2;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -24,7 +31,7 @@ p {
 }
 
 h1 {
-  color: #30333C;
+  color: var(--color1);
   font-size: 30px;
 }
 
@@ -34,12 +41,12 @@ h2 {
 
 h3 {
   font-size: 22px;
-  color: #30333C;
+  color: var(--color1);
 }
 
 header {
   display: flex;
-  background-color: #30333C;
+  background-color: var(--color1);
   padding: 20px;
   justify-content: space-between;
   padding-left: 0;
@@ -59,7 +66,7 @@ header {
 }
 
 .lefttitle {
-background-color: #89C0C2;
+background-color: var(--color2);
 padding: 20px;
 width: 300px;
 justify-content: flex-end;
@@ -74,12 +81,12 @@ a {
 }
 
 .navright a {
-color: #89C0C2;
-border-bottom: solid 4px #89C0C2;
+color: var(--color2);
+border-bottom: solid 4px var(--color2);
 }
 
 a:hover {
-  color: #89C0C2;
+  color: var(--color2);
   background-color: rgba(63, 81, 104, 0.5);
 }
 
@@ -95,13 +102,26 @@ a:hover {
 
 .subtitle {
   position: relative;
-  width: 340px;
+  width: 250px;
   top: 60%;
   left: 80%;
   transform: translate(-50%, -50%);
-  color: #30333C;
-  background-color: #89C0C2;
-  padding: 0 10px 0 10px;
+  color: var(--color1);
+  background-color: var(--color2);
+  padding: 10px;
+  text-align: center;
+}
+
+.page-section h2 {
+  color: var(--color3);
+}
+
+section {
+  font-size: 18px;
+}
+
+article {
+  font-size: 18px;
 }
 
 #about {
@@ -117,8 +137,22 @@ a:hover {
   grid-area: aboutmeside;
 }
 
+#aboutmeside, #workside, #contactmeside {
+  display: flex;
+  border-right: solid 4px var(--color3);
+  padding: 0 20px 0 20px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 #aboutmetext {
   grid-area: aboutmetext;
+  color: var(--color3);
+  display: flex;
+  padding-left: 40px;
+  text-align: justify;
+  /* text-justify: inter-word; */
+  align-items: center;
 }
 
 #profileimg {
@@ -144,6 +178,73 @@ a:hover {
 
 #worklinks {
   grid-area: worklinks;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50% 25% 25%;
+  grid-template-areas: 
+  "portfolio1 portfolio1"
+  "portfolio2 portfolio3"
+  "portfolio4 portfolio5";
+  padding-left: 40px;
+}
+
+#portfolio1 {
+  grid-area: portfolio1;
+  background-image: url("../images/02-portfolio-1.jpg");
+  border: var(--gridareaborder);
+}
+
+#portfolio2 {
+  grid-area: portfolio2;
+  background-image: url("../images/02-portfolio-2.jpg");
+  border: var(--gridareaborder);
+}
+
+#portfolio3 {
+  grid-area: portfolio3;
+  background-image: url("../images/02-portfolio-3.jpg");
+  border: var(--gridareaborder);
+}
+
+#portfolio4 {
+  grid-area: portfolio4;
+  background-image: url("../images/02-portfolio-4.jpg");
+  border: var(--gridareaborder);
+}
+
+#portfolio5 {
+  grid-area: portfolio5;
+  background-image: url("../images/02-run-buddy.jpg");
+  border: var(--gridareaborder);
+}
+
+#worklinks a {
+  padding: 0;
+}
+
+.portfolioGridArea {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: grid;
+  align-content: center;
+  border: var(--color2);
+}
+
+.portfolioGridArea:hover {
+  opacity: 0.7;
+}
+
+.heading {
+  display: flex;
+  background-color: var(--color2);
+  color: var(--color1);
+  justify-content: flex-start;
+  align-items: center;
+  width: 320px;
+  height: 100px;
+  padding: 10px 0 10px 20px;
 }
 
 #contact {
@@ -161,108 +262,6 @@ a:hover {
 
 #contactmelinks {
   grid-area: contactmelinks;
-}
-
-.page-section h2 {
-  color: #445877;
-}
-
-#aboutmeside, #workside, #contactmeside {
-  display: flex;
-  border-right: solid 4px #445877;
-  padding: 0 20px 0 20px;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-#aboutmetext {
-  display: flex;
-  padding-left: 40px;
-  text-align: justify;
-  /* text-justify: inter-word; */
-  align-items: center;
-}
-
-section {
-  font-size: 18px;
-}
-
-article {
-  font-size: 18px;
-}
-
-#worklinks {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 50% 25% 25%;
-  grid-template-areas: 
-  "portfolio1 portfolio1"
-  "portfolio2 portfolio3"
-  "portfolio4 portfolio5";
-  padding-left: 40px;
-}
-
-#portfolio1 {
-  grid-area: portfolio1;
-  background-image: url("../images/02-portfolio-1.jpg");
-  border: solid 4px #89C0C2;
-}
-
-#portfolio2 {
-  grid-area: portfolio2;
-  background-image: url("../images/02-portfolio-2.jpg");
-  border: solid 4px #89C0C2;
-}
-
-#portfolio3 {
-  grid-area: portfolio3;
-  background-image: url("../images/02-portfolio-3.jpg");
-  border: solid 4px #89C0C2;
-}
-
-#portfolio4 {
-  grid-area: portfolio4;
-  background-image: url("../images/02-portfolio-4.jpg");
-  border: solid 4px #89C0C2;
-}
-
-#portfolio5 {
-  grid-area: portfolio5;
-  background-image: url("../images/02-run-buddy.jpg");
-  border: solid 4px #89C0C2;
-}
-
-#worklinks a {
-  padding: 0;
-}
-
-.portfolioGridArea {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  /* margin: 5px; */
-  cursor: pointer;
-  display: grid;
-  align-content: center;
-  border: #89C0C2;
-}
-
-.portfolioGridArea:hover {
-  opacity: 0.7;
-}
-
-.heading {
-  display: flex;
-  background-color: #89C0C2;
-  color: #30333C;
-  justify-content: flex-start;
-  align-items: center;
-  width: 320px;
-  height: 100px;
-  padding: 10px 0 10px 20px;
-}
-
-#contactmelinks {
   display: flex;
   padding-left: 40px;
   align-items: center;
@@ -270,13 +269,13 @@ article {
 }
 
 #contactmelinks a {
-  color: #445877;
-  border-bottom: solid 4px #445877;
+  color: var(--color3);
+  border-bottom: solid 4px var(--color3);
 }
 
 footer {
-  background-color: #30333C;
-  color: #89C0C2;
+  background-color: var(--color1);
+  color: var(--color2);
   text-align: center;
   padding: 20px;
 }
