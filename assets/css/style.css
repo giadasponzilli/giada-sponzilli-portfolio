@@ -98,7 +98,7 @@ a:hover {
   padding: 0 10px 0 10px;
 }
 
-.page-wrapper {
+/* .page-wrapper {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 10% 50% 10%;
@@ -107,9 +107,9 @@ a:hover {
   "work"
   "contact";
   padding-left: 40px;
-}
+} */
 
-#about {
+/* #about {
   grid-area: about;
 }
 
@@ -119,14 +119,19 @@ a:hover {
 
 #contact {
   grid-area: contact;
-}
+} */
+
+/* #about, #work, #contact {
+  padding: 30px 100px 30px 40px;
+}  */
 
 #about {
   display: grid;
   grid-template-columns: 15% 85%;
   grid-template-areas: 
   "aboutmeside aboutmetext";
-  padding-left: 40px;
+  padding: 30px 100px 30px 40px;
+  height: 280px;
 }
 
 #aboutmeside {
@@ -137,12 +142,20 @@ a:hover {
   grid-area: aboutmetext;
 }
 
+#imgtext {
+  height: 200px;
+  width: auto;
+  float: left;
+  padding: 30px;
+}
+
 #work {
   display: grid;
   grid-template-columns: 15% 85%;
   grid-template-areas: 
   "workside worklinks";
-  padding-left: 40px;
+  padding: 30px 100px 30px 40px;
+  height: 800px;
 }
 
 #workside {
@@ -158,7 +171,8 @@ a:hover {
   grid-template-columns: 15% 85%;
   grid-template-areas: 
   "contactmeside contactmelinks";
-  padding-left: 40px;
+  padding: 30px 100px 165px 40px;
+  height: 160px;
 }
 
 #contactmeside {
@@ -169,16 +183,8 @@ a:hover {
   grid-area: contactmelinks;
 }
 
-#about, #work, #contact {
-  padding: 30px 100px 30px 30px;
-}
-
 .page-section h2 {
   color: #445877;
-}
-
-#about {
-  height: 200px;
 }
 
 #aboutmeside, #workside, #contactmeside {
@@ -195,11 +201,6 @@ a:hover {
   text-align: justify;
   /* text-justify: inter-word; */
   align-items: center;
-}
-
-#work {
-  height: 800px;
-  margin-bottom: 500px;
 }
 
 #worklinks {
@@ -284,10 +285,6 @@ section {
 
 article {
   font-size: 18px;
-}
-
-#contact {
-  height: 160px;
 }
 
 #contactmelinks {
