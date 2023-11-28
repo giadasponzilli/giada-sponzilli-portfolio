@@ -11,6 +11,10 @@ The website has been made using flexboxes, grids, variables and pseudo-classes.
 
 The code is deployed at https://giadasponzilli.github.io/giada-sponzilli-portfolio/
 
+## Screenshots
+![Alt text](assets/images/screencapture-file-C-Users-cloem-bootcamp-homework-giada-sponzilli-portfolio-index-html-2023-11-28-12_58_20.png)
+
+![Alt text](assets/images/screencapture-file-C-Users-cloem-bootcamp-homework-giada-sponzilli-portfolio-index-html-2023-11-28-12_59_47.png)
 
 ## Installation
 

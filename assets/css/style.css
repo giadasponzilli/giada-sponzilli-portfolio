@@ -341,21 +341,23 @@ footer {
   }
 
   section {
-    font-size: 12px;
+    font-size: 14px;
   }
   
   article {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   #about {
     display: grid;
-    grid-template-rows: 50px 50px;
+    grid-template-rows: 80px 440px;
     grid-template-columns: 1fr;
     grid-template-areas: 
     "aboutmeside"
     "aboutmetext";
     height: 520px;
+    padding: 0;
+    margin: 0 auto;
   }
   
   #aboutmeside, #workside, #contactmeside {
