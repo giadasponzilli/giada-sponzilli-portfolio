@@ -1,8 +1,10 @@
+/* scroll-behavior for nav bar*/
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
+/* variables for main colours of the website and for colour and size of the portfolio gridarea's border */
 :root {
   --color1: #30333C;
   --color2: #89C0C2;
@@ -89,6 +91,7 @@ color: var(--color2);
 border-bottom: solid 4px var(--color2);
 }
 
+/* hover pseudo-class for all links in the page */
 a:hover {
   color: var(--color2);
   background-color: rgba(63, 81, 104, 0.5);
@@ -104,6 +107,7 @@ a:hover {
   /* position: relative; */
 }
 
+/* "Web Developer" style and position*/
 .subtitle {
   position: relative;
   width: 250px;
@@ -116,6 +120,7 @@ a:hover {
   text-align: center;
 }
 
+/* colour for all the h2 in the page-section (about me, work, contact) */
 .page-section h2 {
   color: var(--color3);
 }
@@ -128,6 +133,7 @@ article {
   font-size: 18px;
 }
 
+/* Grid for about section */
 #about {
   display: grid;
   grid-template-columns: 15% 85%;
@@ -141,6 +147,7 @@ article {
   grid-area: aboutmeside;
 }
 
+/* Style for the sides sections */
 #aboutmeside, #workside, #contactmeside {
   display: flex;
   border-right: solid 4px var(--color3);
@@ -167,6 +174,7 @@ article {
   border-radius: 50px;
 }
 
+/* Grid for work section */
 #work {
   display: grid;
   grid-template-columns: 15% 85%;
@@ -180,6 +188,7 @@ article {
   grid-area: workside;
 }
 
+/* Grid for the portfolio worklinks section */
 #worklinks {
   grid-area: worklinks;
   display: grid;
@@ -222,10 +231,12 @@ article {
   border: var(--gridareaborder);
 }
 
+/* Padding 0 to eliminate the space between the heading and the border of the a links */
 #worklinks a {
   padding: 0;
 }
 
+/* Grid for protfolioGridArea section, style of what is inside the worklinks */
 .portfolioGridArea {
   background-position: center;
   background-size: cover;
@@ -236,10 +247,12 @@ article {
   border: var(--color2);
 }
 
+/* hover pseudo-class on the images of the worklinks section */
 .portfolioGridArea:hover {
   opacity: 0.7;
 }
 
+/* style of the heading (names of projects in the worklinks section */
 .heading {
   display: flex;
   background-color: var(--color2);
@@ -251,6 +264,7 @@ article {
   padding: 10px 0 10px 20px;
 }
 
+/* Grid for the contact section */
 #contact {
   display: grid;
   grid-template-columns: 15% 85%;
@@ -264,6 +278,7 @@ article {
   grid-area: contactmeside;
 }
 
+/* style for the contact me links at the end of page */
 #contactmelinks {
   grid-area: contactmelinks;
   display: flex;
@@ -277,6 +292,7 @@ article {
   border-bottom: solid 4px var(--color3);
 }
 
+/* footer with message and copywright */
 footer {
   background-color: var(--color1);
   color: var(--color2);
@@ -285,10 +301,7 @@ footer {
 }
 
 
-
-
-
-
+/* Media query for a screen of max-width 600px, new rules applied*/
 @media only screen and (max-width: 600px) {
 
   * {
